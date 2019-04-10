@@ -38,7 +38,7 @@ to launch the program. Aside from blinking the LED to your heartbeat, this code 
 
 Here's a sample of what the data looks like in the terminal
 
-![PulseSensor_timer terminal data](images/PulseSensor_timer_term.png)
+![PulseSensor_timer terminal data](../images/PulseSensor_timer_term.png)
 
 ### TO DO: 
 Build option to read from file
@@ -52,7 +52,7 @@ Well, it's great and all to have tightly timed samples, but we *really* want to 
 	
 Then type `./gnuplotPulse` to launch the program. Here's an example of what the plot looks like.
 
-![gnuplotPulse](images/gnuplotPulse.png)
+![gnuplotPulse](../images/gnuplotPulse.png)
 
 This program will write a data file on your RasPi in `/home/pi/Documents/PulseSensor/PulseSensor_gnuplot/PulseData/` with the name `PulsePlot_<timestamp>.dat` in the same format as the PulseSensor Timer code above:
 
