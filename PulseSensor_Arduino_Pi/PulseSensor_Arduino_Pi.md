@@ -1,7 +1,7 @@
 # Pulse Sensor + Arduino + Pi
 Connect Pulse Sensor to Raspberry Pi with Arduino!
 
-### Things you'll need
+## Things you'll need
 
 * Pulse Sensor
 * Raspberry Pi (we use a RasPi 3 B)

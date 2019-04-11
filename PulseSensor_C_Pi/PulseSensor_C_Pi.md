@@ -2,6 +2,26 @@
 The example code here is written in C to run on Raspberry Pi
 There are two programs. They both rely on the wiringPi library, which should have been included in your OS distribution. If not, go to [wiringPi](http://wiringpi.com/) to download it.
 
+## Things you'll need
+
+* Pulse Sensor
+* Raspberry Pi (we use a RasPi 3 B)
+* Breadboard
+* MCP3008 ADC IC
+* LED & Resistor (220ohm - 1K)
+* Jumper wires (male/female)
+
+There are many was to set up your Pi. We used [Adafruit's](https://learn.adafruit.com/series/learn-raspberry-pi) tutorial to get set up. Once you have the Pi OS up and running, you will want to make sure that your configuration settings allow us to connect the Arduino. In the GUI, select `Raspberry Pi Configuration`, then open the `Interfaces` tab and enable Serial Port.
+
+![Conf_Window_Serial_Enable]()
+
+To do this on the command line, you need to edit your config file. Open a terminal window and type in
+
+	sudo raspi-config
+	
+This will open up a configuration panel. Use the arrow keys to move down to `Interfacing Options` then press the right arrow to highlight `<Select>` and press either the space bar or Enter/Return. In the next pane, arrow down to the Serial Port option and enable it. Pi may ask you to reboot, so go ahead and do that, otherwise arrow your way to `<Finish>` and get out of the config menu.
+
+
 ## Connect your Pulse Sensor to Raspberry Pi
 The Pulse Sensor outputs an analog signal, which the RasPi cannot natively handle. In the examples below, we are using an Analog to Digital Converter (ADC) IC to digitize the Pulse Sensor signal. As of this writing, the code below supports the MCP3008 ADC IC. (You could use the MCP3004 if you like). The Wiring Pi library has functions that enable us to easily access data from the MCP3008. You can pick one up at [Mouser](https://www.mouser.com/ProductDetail/Microchip-Technology/MCP3008-I-SL?qs=BYQkrObauiuZK6Atf%2FfReA%3D%3D&gclid=CjwKCAjwhbHlBRAMEiwAoDA343G0yGlECsWZ5zo-5UbrMk58sLaK11XtHWNU8w9fzKlpIiY343y0YBoCrBgQAvD_BwE) or [SparkFun](https://www.sparkfun.com/products/15099) or [Adafruit](https://www.adafruit.com/product/856). 
 
