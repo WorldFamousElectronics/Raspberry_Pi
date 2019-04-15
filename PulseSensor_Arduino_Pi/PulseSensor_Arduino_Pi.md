@@ -8,7 +8,7 @@ Connect Pulse Sensor to Raspberry Pi with Arduino!
 * Arduino compatible microcontroller board
 * USB cable
 
-There are many was to set up your Pi. We used [Adafruit's](https://learn.adafruit.com/series/learn-raspberry-pi) tutorial to get set up. Once you have the Pi OS up and running, you will want to make sure that your configuration settings allow us to connect the Arduino. In the GUI, select `Raspberry Pi Configuration`, then open the `Interfaces` tab and enable Serial Port.
+There are many was to set up your Pi. We used [Adafruit's](https://learn.adafruit.com/series/learn-raspberry-pi) tutorial to get set up. Once you have the Pi OS up and running, you will want to make sure that your configuration settings allow us to connect the Arduino. In the GUI, select `Raspberry Pi Configuration`, then open the `Interfaces` tab and enable Serial Port. This process may require you to restart your Pi.
 
 ![Conf_Window_Serial_Enable](../images/PiConfigWindowSerial.png)
 
