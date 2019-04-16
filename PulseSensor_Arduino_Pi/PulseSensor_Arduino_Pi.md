@@ -37,7 +37,7 @@ This might take a moment. When it's done, open up a web browser on the Pi and go
 	
 ![downloadArduino](../images/DownloadArduino.png)
 
-Click on **Linux ARM 32 bits** to download it to your Downloads folder. Now you have a zipped up Arduino file in your Downloads folder. To unzip it, go back to the terminal window and move to the Downloads folder by entering `cd Downloads` then enter `ls` to make sure you get the right file name to extract. When I wrote this, the version was 1.8.9 your version may differ. On the command line, enter
+Click on **Linux ARM 32 bits** to download it to your Downloads folder. Wait just a sec for it to download. Now you have a zipped up Arduino file in your Downloads folder. To unzip it, go back to the terminal window and move to the Downloads folder by entering `cd Downloads` then enter `ls` to make sure you get the right file name to extract. When I wrote this, the version was 1.8.9 your version may differ. On the command line, enter
 
 	tar -xf arduino-1.8.9-linuxarm.tar.xz
 	
