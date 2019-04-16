@@ -1,5 +1,7 @@
 # Pulse Sensor + C + Raspberry Pi
-The example code here is written in C to run on Raspberry Pi. There are two programs: **Pulse Sensor Timer** and **Pulse Sensor Gnuplot**. They both rely on the WiringPi library, which should have been included in your OS distribution. If not, go to [wiringPi](http://wiringpi.com/) to download it. You might want to update it while you're at it. Open a terminal window and type in `sudo get-apt update wiringPi`
+The example code here is written in C to run on Raspberry Pi. There are two programs: **Pulse Sensor Timer** and **Pulse Sensor Gnuplot**. They both rely on the WiringPi library, which should have been included in your OS distribution. If not, go to [wiringPi](http://wiringpi.com/) to download it. You might want to update it while you're at it. Open a terminal window and type in
+
+	`sudo get-apt update wiringPi`
 
 ## Things you'll need
 
@@ -41,7 +43,7 @@ The RasPi interfaces the MCP3008 via the hardware SPI pins. Here's a diagram to 
 In addition to the MCP3008, you will need a [breadboard](https://www.adafruit.com/product/64) and some [male/female jumper cables](https://www.adafruit.com/product/826). We want to blink an LED, so you should have one of those handy, along with a resistor (220ohm to 1K should work fine).
 
 
-## Pulse Sensor Sample Timing
+# Pulse Sensor Timer
 In order to get accurate BPM data from the Pulse Sensor, it is important to have fast and regular reading of the Pulse Sensor analog signal. By fast, we mean 500Hz (1 sample every 2 milliseconds). By regular, we mean 1 sample every 2 milliseconds. Period. Not 2.5 milliseconds, not 1.8 milliseconds, not whenever the OS decides to get around to it. This is much easier to do on a microcontroller where you are not running on top of an operating system. Arduino, for example, has no problem setting its hardware timer to sample data every 2 milliseconds on the dot. But we're not in Arduino, we're in RasPi, and things are different.
 
 In an effort to get 'as close to the metal' as we can on the RasPi, we are using an alarm timer in this code to trigger a regular interrupt. Even though we are using a hardware clock to interrupt us, we still will get some jitter from the OS not releasing at a predictable time. 
@@ -77,7 +79,7 @@ Build option to read from file
 
 We are using the `ualarm()` function call which has been deprecated. Future versions of this code will use the recommended replacement.
 
-## Pulse Sensor gnuplot
+# Pulse Sensor gnuplot
 Well, it's great and all to have tightly timed samples, but we *really* want to see the pulse data graphed live while it's running. With the Raspberry Pi this is possible, but again, since we're riding on an operating system things can get a little glitchy. For this C code example, we are going to use the `delayMicroseconds()` function from the Wiring Pi library to create a software timer for timing our samples. This program will open a pipe to Gnuplot, a light weight data plotting program, to do the visualization. In Terminal, navigate to the folder where you put the C code and type in
 
 	gcc gnuplotPulse PulseSensor_gnuplot.c -lwiringPi
@@ -97,6 +99,8 @@ Gnuplot is a pretty awesome graphing software, and we're super psyched that it c
 Build option to read from file.
 
 Print out the BPM on the Gnuplot window (line 100, collumn 3).
+
+Print out the jitter on the Gnuplot window.
 
 Command line option to graph the jitter..
 
