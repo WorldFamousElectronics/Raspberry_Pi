@@ -96,6 +96,8 @@ Build option to read from file.
 
 Print out the BPM on the Gnuplot window (line 100, collumn 3).
 
+Print out the jitter on the Gnuplot window.
+
 Command line option to graph the jitter..
 
 Dynamically adjust the `delayMicroseconds()` time value to reduce jitter.
