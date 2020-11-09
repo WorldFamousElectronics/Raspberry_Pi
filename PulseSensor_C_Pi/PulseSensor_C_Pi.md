@@ -1,7 +1,7 @@
 # Pulse Sensor + C + Raspberry Pi
 The example code here is written in C to run on Raspberry Pi. There are two programs: **Pulse Sensor Timer** and **Pulse Sensor Gnuplot**. They both rely on the WiringPi library, which should have been included in your OS distribution. If not, go to [wiringPi](http://wiringpi.com/) to download it. You might want to update it while you're at it. Open a terminal window and type in
 
-	sudo get-apt update wiringPi
+	sudo apt install wiringpi
 
 ## Things you'll need
 
